@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Views.Login.LoginPage">
+
+    <Grid BackgroundColor="DarkCyan">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="Welcome" FontSize="70" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Bisque"></Label>
+        <Label Grid.Row="1" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="10" Text="Username"></Label>
+        <StackLayout Grid.Row="2">
+            <Entry Placeholder="input username here" Margin="10" Text="{Binding Login.Username}"></Entry>
+        </StackLayout>
+        <Label Grid.Row="3" FontSize="30" Text="Password" HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
+        <StackLayout Grid.Row="4">
+            <Entry Placeholder="input password here" Margin="10" Text="{Binding Login.Password}"></Entry>
+        </StackLayout>
+        <StackLayout Grid.Row="5">
+            <Button Text="Log in" HeightRequest="70" CornerRadius="10" Margin="10" BackgroundColor="DeepPink" Command="{Binding LoginCommand}"></Button>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
